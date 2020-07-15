@@ -1,0 +1,22 @@
+{% extends "quizzes/base.html" %}
+
+
+{% block content %}
+	<section class="quiz">
+		<h2>{{ quiz.name }}</h2>
+		<h3>{{ quiz.short }}</h3>
+		{{ quiz.description|safe }}
+		{% if quiz.photos.count %}
+			<section class="photos">
+				{% for photo in quiz.photos.all %}
+					<div class="photo">
+						<img src="" data-src="{{ photo.photo.url }}">
+						{% if photo.description %}
+							<p>{{ photo.description|default_if_none:'' }}</p>
+						{% endif %}
+					</div>
+				{% endfor %}
+			</section>
+		{% endif %}
+	</section>
+{% endblock %}
