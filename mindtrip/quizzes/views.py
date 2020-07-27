@@ -20,3 +20,8 @@ def get_quiz(request, quiz_id):
 @render_to('quizzes/tags.html')
 def get_tags(request):
     return {'tags': Tag.objects.all()}
+
+
+@render_to('quizzes/tag.html')
+def get_tag(request, slug):
+    return {'recipes': Quiz.objects.filter(tags__slug=slug)}
