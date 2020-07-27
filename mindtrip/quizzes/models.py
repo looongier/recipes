@@ -43,7 +43,7 @@ class Photo(models.Model):
         verbose_name_plural = 'Zdjęcia'
 
     def __str__(self):
-        return '{0} ({1})'.format(self.quiz, self.photo.url)
+        return '{0} ({1})'.format(self.recipe, self.photo.url)
 
 
 class Tag(models.Model):
