@@ -4,24 +4,24 @@
 from annoying.decorators import render_to
 from django.shortcuts import get_object_or_404
 
-from .models import Quiz, Tag
+from .models import Recipe, Tag
 
 
-@render_to('quizzes/recipes.html')
+@render_to('recipes/recipes.html')
 def get_recipes(request):
-    return {'recipes': Quiz.objects.all().order_by('-added_at')}
+    return {'recipes': Recipe.objects.all().order_by('-added_at')}
 
 
-@render_to('quizzes/quiz.html')
-def get_quiz(request, quiz_id):
-    return {'quiz': get_object_or_404(Quiz, id=quiz_id)}
+@render_to('recipes/recipe.html')
+def get_recipe(request, recipe_id):
+    return {'recipe': get_object_or_404(Recipe, id=recipe_id)}
 
 
-@render_to('quizzes/tags.html')
+@render_to('recipes/tags.html')
 def get_tags(request):
     return {'tags': Tag.objects.all()}
 
 
-@render_to('quizzes/tag.html')
+@render_to('recipes/tag.html')
 def get_tag(request, slug):
-    return {'recipes': Quiz.objects.filter(tags__slug=slug)}
+    return {'recipes': Recipe.objects.filter(tags__slug=slug)}

@@ -1,14 +1,14 @@
-{% extends "quizzes/base.html" %}
+{% extends "recipes/base.html" %}
 
 
 {% block content %}
 	<section class="quiz">
-		<h2>{{ quiz.name }}</h2>
-		<h3>{{ quiz.short }}</h3>
-		{{ quiz.description|safe }}
-		{% if quiz.photos.count %}
+		<h2>{{ recipe.name }}</h2>
+		<h3>{{ recipe.short }}</h3>
+		{{ recipe.description|safe }}
+		{% if recipe.photos.count %}
 			<section class="photos">
-				{% for photo in quiz.photos.all %}
+				{% for photo in recipe.photos.all %}
 					<div class="photo">
 						<img src="" data-src="{{ photo.photo.url }}">
 						{% if photo.description %}

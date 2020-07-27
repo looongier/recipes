@@ -10,10 +10,10 @@ from .helpers import slugify
 
 def photo_upload_to(instance, filename):
     return os.sep.join(
-        ['quizzes', str(instance.quiz_id), filename])
+        ['recipes', str(instance.recipe_id), filename])
 
 
-class Quiz(models.Model):
+class Recipe(models.Model):
     name = models.CharField(max_length=255, verbose_name='Nazwa')
     short = models.CharField(max_length=255, verbose_name='Skrót')
     description = models.TextField(verbose_name='Opis')
@@ -22,8 +22,8 @@ class Quiz(models.Model):
     tags = models.ManyToManyField('Tag', blank=True, verbose_name='Tagi')
 
     class Meta:
-        verbose_name = 'Konkurs'
-        verbose_name_plural = 'Konkursy'
+        verbose_name = 'Przepis'
+        verbose_name_plural = 'Przepisy'
 
     def __str__(self):
         return self.name
@@ -32,8 +32,8 @@ class Quiz(models.Model):
 class Photo(models.Model):
     photo = models.ImageField(
         upload_to=photo_upload_to, verbose_name='Zdjęcie')
-    quiz = models.ForeignKey(
-        Quiz, verbose_name='Quiz', related_name='photos',
+    recipe = models.ForeignKey(
+        Recipe, verbose_name='Przepis', related_name='photos',
         on_delete=models.CASCADE)
     description = models.CharField(
         max_length=255, null=True, blank=True, verbose_name='Opis')

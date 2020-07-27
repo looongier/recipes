@@ -1,4 +1,4 @@
-{% extends "quizzes/base.html" %}
+{% extends "recipes/base.html" %}
 
 
 {% block content %}
@@ -9,12 +9,12 @@
 		<h2>Quizy</h2>
 		{% for quiz in recipes %}
 			<section>
-				<h3><a href="{% url 'recipes:quiz' quiz.id %}">{{ quiz.added_at|date:"d.m.Y" }} {{ quiz.name }}</a></h3>
+				<h3><a href="{% url 'recipes:recipe' quiz.id %}">{{ quiz.added_at|date:"d.m.Y" }} {{ quiz.name }}</a></h3>
 				<article>
 					{{ quiz.short }}
 				</article>
 			</section>
 		{% endfor %}
-		<h3><a href="{% url 'recipes:quiz' 1 %}">{{ quiz.added_at|date:"d.m.Y" }} {{ quiz.name }}</a></h3>
+		<h3><a href="{% url 'recipes:recipe' 1 %}">{{ quiz.added_at|date:"d.m.Y" }} {{ quiz.name }}</a></h3>
 	</section>
 {% endblock %}
