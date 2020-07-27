@@ -1,0 +1,14 @@
+{% extends "quizzes/base.html" %}
+
+
+{% block content %}
+
+	<section class="quizzes">
+		<h2>Tagi</h2>
+		{% for tag in tags %}
+			<section>
+				<h3><a href="">{{ tag.name }}</a></h3>
+			</section>
+		{% endfor %}
+	</section>
+{% endblock %}

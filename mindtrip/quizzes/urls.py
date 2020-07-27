@@ -14,4 +14,5 @@ urlpatterns = [
     path('<int:quiz_id>', views.get_quiz, name='quiz'),
     path('gwara',
          TemplateView.as_view(template_name='quizzes/gwara.html'), name='dialect'),
+    path('tagi', views.get_tags, name='tags'),
 ]

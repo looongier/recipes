@@ -3,7 +3,7 @@
 <head lang="pl">
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Geodotkowe quizy</title>
+	<title>Longerkowe przepisy</title>
 	<link href="https://fonts.googleapis.com/css?family=Caveat|Quicksand" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 	<link type="text/css" rel="stylesheet" href="{{ STATIC_URL }}css/quizzes.css" charset="utf-8">
@@ -14,6 +14,7 @@
 	<header>
 		<nav>
 			<a href="{% url 'recipes:recipes' %}" class="nav-selected">Przepisy</a>
+			<a href="{% url 'recipes:tags' %}" class="nav-selected">Tagi</a>
 		</nav>
 	</header>
 
