@@ -4,9 +4,6 @@
 {% block content %}
 
 	<section class="quizzes">
-		<h2>Upiecz ciacho</h2>
-		<h3><a href="{% url 'recipes:dialect' %}" class="nav-selected">kliknij tu, coby wejsc w gware</a></h3>
-		<h2>Quizy</h2>
 		{% for quiz in recipes %}
 			<section>
 				<h3><a href="{% url 'recipes:recipe' quiz.id %}">{{ quiz.added_at|date:"d.m.Y" }} {{ quiz.name }}</a></h3>

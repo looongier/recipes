@@ -18,8 +18,8 @@ body {
 	padding: 0;
 	font-family: 'Quicksand', sans-serif;
 	font-size: 18px;
-	color: #fff;
-	background-color: rgba(56, 99, 53, 0.71);
+	color: #a;
+	background-color: rgba(526, 199, 120, 0.71);
 	position: relative;
 }
 
@@ -57,7 +57,7 @@ main {
 }
 
 footer {
-	background-color: rgba(56, 9, 53, 0.7);
+	background-color: rgba(56, 19, 53, 0.7);
 	font-size: 16px;
 	bottom: 0;
 	height: auto;
