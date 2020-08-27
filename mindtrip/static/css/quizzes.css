@@ -19,7 +19,10 @@ body {
 	font-family: 'Quicksand', sans-serif;
 	font-size: 18px;
 	color: #a;
-	background-color: rgba(526, 190, 120, 0.71);
+/*	background-color: rgba(526, 19, 120, 0.71);*/
+    background-image: url("/static/images/watercolor.png");
+    background-attachment: fixed;
+    backdrop-filter: blur(5px);
 	position: relative;
 }
 
@@ -28,7 +31,6 @@ header {
 	background-color: rgba(56, 9, 53, 0.7);
 	height: auto;
 	width: 100%;
-	position: fixed;
 	top: 0;
 	left: 0;
 	z-index: 9999;
@@ -77,6 +79,12 @@ footer {
 
 .banner .cake {
 	font-size: 40px;
+}
+
+.ingredients
+{
+    font-size: 16px;
+    list-style-type: circle;
 }
 
 .photos {
