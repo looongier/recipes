@@ -33,7 +33,7 @@ body {
 	color: #a;
     background-image: url("/static/images/watercolor.png");
     background-attachment: fixed;
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(28px);
 	position: relative;
 }
 
