@@ -9,8 +9,20 @@ p {
 }
 
 ul {
-	list-style-type: none;
-	padding: 0;
+  margin: 0;
+
+}
+ul.dashed {
+  list-style-type: none;
+}
+
+ul.dashed > li {
+  text-indent: -5px;
+}
+
+ul.dashed > li:before {
+  content: "-";
+  text-indent: -5px;
 }
 
 body {
@@ -19,10 +31,9 @@ body {
 	font-family: 'Quicksand', sans-serif;
 	font-size: 18px;
 	color: #a;
-/*	background-color: rgba(526, 19, 120, 0.71);*/
     background-image: url("/static/images/watercolor.png");
     background-attachment: fixed;
-    backdrop-filter: blur(5px);
+    backdrop-filter: blur(10px);
 	position: relative;
 }
 
@@ -78,7 +89,7 @@ footer {
 }
 
 .banner .cake {
-	font-size: 40px;
+	font-size: 50px;
 }
 
 .ingredients

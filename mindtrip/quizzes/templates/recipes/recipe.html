@@ -4,7 +4,7 @@
 {% block content %}
 	<section class="quiz">
 		<h2>{{ recipe.name }}</h2>
-		<h3>{{ recipe.short }}</h3>
+		<h4 style="text-align:center">czas przygotowania: {{ recipe.short }} minut</h4>
 		{{ recipe.description|safe }}
 		{% if recipe.photos.count %}
 			<section class="photos">
