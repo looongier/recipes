@@ -16,6 +16,7 @@ def photo_upload_to(instance, filename):
 class Recipe(models.Model):
     name = models.CharField(max_length=255, verbose_name='Nazwa')
     short = models.CharField(max_length=255, verbose_name='Czas przygotowania')
+    preparation_before = models.CharField(max_length=255, verbose_name='Czas na przygotowanie')
     description = models.TextField(verbose_name='Opis')
     added_at = models.DateField(verbose_name='Data dodania')
 
