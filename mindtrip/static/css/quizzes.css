@@ -12,17 +12,21 @@ ul {
   margin: 0;
 
 }
-ul.dashed {
+ul.ingredients {
   list-style-type: none;
 }
 
-ul.dashed > li {
+ul.ingredients > li {
   text-indent: -5px;
 }
 
-ul.dashed > li:before {
+ul.ingredients > li:before {
   content: "-";
   text-indent: -5px;
+}
+
+ul.przepis {
+    list-style-type: circle;
 }
 
 body {
