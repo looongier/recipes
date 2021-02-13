@@ -6,6 +6,7 @@ a {
 
 p {
 	text-align: justify;
+	text-indent: 20px;
 }
 
 ul {
@@ -26,7 +27,7 @@ ul.ingredients > li:before {
 }
 
 ul.przepis {
-    list-style-type: circle;
+
 }
 
 body {
