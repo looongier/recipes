@@ -15,10 +15,13 @@ def photo_upload_to(instance, filename):
 
 class Recipe(models.Model):
     name = models.CharField(max_length=255, verbose_name='Nazwa')
-    short = models.CharField(max_length=255, verbose_name='Czas przygotowania')
-    preparation_before = models.CharField(max_length=255, verbose_name='Czas przed przygotowaniem')
+    short = models.CharField(max_length=255, verbose_name='Czas gotowania')
+    preparation_before = models.CharField(max_length=255, verbose_name='Czas przygotowania przed gotowaniem właściwym')
+    how_much = models.CharField(max_length=255, verbose_name='Ile tego wyjdzie', default="")
+    ingredients = models.TextField(verbose_name='Składniki', default="")
     description = models.TextField(verbose_name='Opis')
     added_at = models.DateField(verbose_name='Data dodania')
+
 
     tags = models.ManyToManyField('Tag', blank=True, verbose_name='Tagi')
 
