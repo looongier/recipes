@@ -120,18 +120,32 @@ footer {
 	justify-content: center;
 }
 
-.photo {
+.photo {/*
 	margin: 20px;
 	width: 400px;
 	text-align: center;
-}
 
-.photo img {
+
+    padding: 0;
+    display: block;
+    margin: 0 auto;
+    max-height: 100%;
+    max-width: 100%;
+*/
+    }
+
+.photo img {/*
 	max-height: 300px;
 	max-width: 400px;
 	height: auto;
 	border: 5px solid #ffffff;
 	margin-bottom: 10px;
+*/
+    padding: 0;
+    display: block;
+    margin: 0 auto;
+    max-height: 100%;
+    max-width: 100%;
 }
 
 .photo p {
@@ -243,13 +257,19 @@ footer {
 	}
 
 	.photo {
-		margin: 12px;
+        margin: 12px;*/
 	}
 
-	.photo img {
+	.photo img {/*
 		height: auto;
 		margin-bottom: 7px;
 		border: 3px solid #fff;
+	*/
+    padding: 0;
+    display: block;
+    margin: 0 auto;
+    max-height: 100%;
+    max-width: 100%;
 	}
 
 	.photo p {
