@@ -7,6 +7,7 @@
 		<h4>czas przygotowania: <font size="+2">{{ recipe.preparation_before }}</font></h4>
 		<h4>czas gotowania: <font size="+2">{{ recipe.short }} </font>minut</h4>
 		<br>
+		<h3>składniki na {{ recipe.how_much }}:</h3>
 		{{ recipe.ingredients|safe }}
 		<br>
 		{{ recipe.description|safe|linebreaks }}
