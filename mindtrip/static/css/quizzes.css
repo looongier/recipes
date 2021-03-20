@@ -66,8 +66,15 @@ h4{
 
 
 nav a:hover {
-	color: rgb(208, 171, 245);
+/*	color: rgb(208, 171, 245);
+*/
+color: #d53bf3;
 }
+
+a:hover {
+color: black;
+}
+
 
 nav a {
 	font-size: 18px;
@@ -169,7 +176,7 @@ footer {
 }
 
 .quiz a {
-	color: #000000;
+	color: #f79340;
 }
 
 .gwara {
