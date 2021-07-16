@@ -9,6 +9,6 @@
 				<h3><a href="{% url 'recipes:recipe' quiz.id %}"> {{ quiz.name }}</a></h3>
 			</section>
 		{% endfor %}
-		<h3><a href="{% url 'recipes:recipe' 1 %}">{{ quiz.added_at|date:"d.m.Y" }} {{ quiz.name }}</a></h3>
+		<h3><a href="{% url 'recipes:recipe' 7 %}">{{ quiz.added_at|date:"d.m.Y" }} {{ quiz.name }} </a></h3>
 	</section>
 {% endblock %}

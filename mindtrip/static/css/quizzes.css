@@ -36,9 +36,8 @@ body {
 	font-family: 'Quicksand', sans-serif;
 	font-size: 18px;
 	color: #a;
-    background-image: url("/static/images/watercolor.png");
+    background-image: url("/static/images/watercolor.jpg");
     background-attachment: fixed;
-    backdrop-filter: blur(10px);
 	position: relative;
 }
 
