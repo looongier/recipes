@@ -7,6 +7,7 @@
 		{% for quiz in recipes %}
 			<section>
 				<h3><a href="{% url 'recipes:recipe' quiz.id %}">{{ quiz.added_at|date:"d.m.Y" }} {{ quiz.name }} {{ quiz.short }}</a></h3>
+    				<img src={{quiz.first_photo.photo.url}}>
 			</section>
 		{% endfor %}
 	</section>

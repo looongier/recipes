@@ -29,6 +29,10 @@ class Recipe(models.Model):
         verbose_name = 'Przepis'
         verbose_name_plural = 'Przepisy'
 
+    @property
+    def first_photo(self):
+        self.photos.all().first()
+
     def __str__(self):
         return self.name
 
