@@ -3,11 +3,15 @@
 
 {% block content %}
 
-	<section class="quizzes">
+	<section class="cards">
 		{% for quiz in recipes %}
-			<section>
-				<h3><a href="{% url 'recipes:recipe' quiz.id %}"> {{ quiz.name }}</a></h3>
-			</section>
+			<article>
+
+				<img class="article-img" src={{quiz.first_photo.photo.url}}>
+
+				<h3><a class="article-title" href="{% url 'recipes:recipe' quiz.id %}"> {{ quiz.name }} </a></h3>
+			</article>
 		{% endfor %}
 	</section>
+
 {% endblock %}

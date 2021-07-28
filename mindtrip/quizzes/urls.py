@@ -15,6 +15,5 @@ urlpatterns = [
     path('gwara', TemplateView.as_view(template_name='recipes/gwara.html'), name='dialect'),
     path('tagi', views.get_tags, name='tags'),
     path('tagi/<slug:slug>', views.get_tag, name='tag'),
-    path('kafelki', views.get_tiles, name='tiles')
 
 ]

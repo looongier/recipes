@@ -25,7 +25,3 @@ def get_tags(request):
 @render_to('recipes/tag.html')
 def get_tag(request, slug):
     return {'recipes': Recipe.objects.filter(tags__slug=slug)}
-
-@render_to('recipes/tiles.html')
-def get_tiles(request):
-    return {'recipes': Recipe.objects.all().order_by('-added_at')}
