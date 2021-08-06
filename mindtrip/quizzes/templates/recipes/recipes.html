@@ -7,9 +7,10 @@
 		{% for quiz in recipes %}
 			<article>
 
-				<a href="{% url 'recipes:recipe' quiz.id %}"><img class="article-img" src={{quiz.first_photo.photo.url}} ></a>
+				<a href="{% url 'recipes:recipe' quiz.id %}"><img class="article-img" src={{quiz.first_photo.photo.url}}></a>
  				<h3><a class="article-title" href="{% url 'recipes:recipe' quiz.id %}"> {{ quiz.name }} </a></h3>
 			</article>
 		{% endfor %}
 	</section>
 
+{% endblock %}
