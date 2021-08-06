@@ -1,3 +1,56 @@
+.row {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  grid-gap: 30px;
+  max-width: 960px;
+  margin: 0 auto 30px;
+}
+
+.box {
+  height: 250px;
+  width: 100%;
+  object-fit: cover;
+	align-items: center;
+
+	border-radius: 10px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  display: flex;
+	flex-direction: column;
+   -webkit-transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+  transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+
+}
+
+.box::after {
+  border-radius: 10px;
+	box-shadow: 0 5px 15px rgba(0, 0, 0, 1);
+	content: "";
+	height: 100%;
+  left: 0;
+	opacity: 0;
+  position: absolute;
+  top: 0;
+  -webkit-transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+  transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+	width: 100%;
+	z-index: -1;
+}
+
+.box:hover {
+  -webkit-transform: scale(1.05, 1.05);
+  transform: scale(1.05, 1.05);
+	z-index: 10;
+}
+
+.box:hover {
+	opacity: 1;
+	transition: 0.3s;
+}
+
+.box:hover::after {
+	opacity: 1;
+}
+
 .cards {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
@@ -14,6 +67,7 @@ article {
   height: 200px;
   width: 100%;
   object-fit: cover;
+  	border-radius: 5px;
 }
 
 .article-title {

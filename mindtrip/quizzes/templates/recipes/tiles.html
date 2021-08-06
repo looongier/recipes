@@ -3,13 +3,13 @@
 
 {% block content %}
 
-	<section class="cards">
+	<div class="row">
 		{% for quiz in recipes %}
-			<article>
-
+			<div class="box">
 				<a href="{% url 'recipes:recipe' quiz.id %}"><img class="article-img" src={{quiz.first_photo.photo.url}} ></a>
- 				<h3><a class="article-title" href="{% url 'recipes:recipe' quiz.id %}"> {{ quiz.name }} </a></h3>
-			</article>
+				<h3><a class="article-title" href="{% url 'recipes:recipe' quiz.id %}">{{ quiz.added_at|date:"d.m.Y" }} {{ quiz.name }} </a></h3>
+			</div>
 		{% endfor %}
-	</section>
+	</div>
 
+{% endblock %}
